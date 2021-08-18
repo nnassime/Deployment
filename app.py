@@ -42,7 +42,7 @@ async def classify_url(request):
 
 def predict_image_from_bytes(bytes):
 
-    # ADD ******************
+    # Added ******************
 
     img = io.BytesIO(bytes)
     img.seek(0)
@@ -57,7 +57,7 @@ def predict_image_from_bytes(bytes):
 
 
 
-    output_image = draw_bbox(frame, bbox, label, conf)
+    output_image = draw_bbox(frame, bbox, label, conf, write_conf=True)
     print('prediction object detection  donne')
     print(label, conf)
 
@@ -66,7 +66,7 @@ def predict_image_from_bytes(bytes):
     cv2.imwrite('img_output.jpg', output_image) 
     img_uri = base64.b64encode(open("img_output.jpg", 'rb').read()).decode('utf-8')
 
-    # ADD ******************
+    # Added ******************
 
 
 
@@ -93,7 +93,7 @@ def form(request):
         return HTMLResponse(
             """
             <h1> Greenr </h1>
-            <p> Is your picture of a dandelion or grass? </p>
+            <p> Deployment of Yolov3.tiny by Data Science and Applications Research Unit </p>
             <form action="/upload" method = "post" enctype = "multipart/form-data">
                 <u> Select picture to upload: </u> <br> <p>
                 1. <input type="file" name="file"><br><p>
