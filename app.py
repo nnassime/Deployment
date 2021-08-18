@@ -1,7 +1,8 @@
 #deep learning libraries
 from fastai.vision import *
-import torch
-defaults.device = torch.device('cpu')
+
+#import torch
+#defaults.device = torch.device('cpu')
 
 #web frameworks
 from starlette.applications import Starlette
