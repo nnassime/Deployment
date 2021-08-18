@@ -93,8 +93,8 @@ def predict_image_from_bytes(bytes):
 def form(request):
         return HTMLResponse(
             """
-            <h1> Greenr </h1>
-            <p> Deployment of Yolov3.tiny by Data Science and Applications Research Unit </p>
+            <h1> Deployment of Yolov3.tiny by Data Science and Applications Research Unit </h1>
+            <p>  Object detection </p>
             <form action="/upload" method = "post" enctype = "multipart/form-data">
                 <u> Select picture to upload: </u> <br> <p>
                 1. <input type="file" name="file"><br><p>
