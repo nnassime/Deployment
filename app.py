@@ -26,8 +26,8 @@ async def get_bytes(url):
             return await response.read()
 
 app = Starlette()
-path = Path('')
-learner = load_learner(path)
+#path = Path('')
+#learner = load_learner(path)
 
 @app.route("/upload", methods = ["POST"])
 async def upload(request):
@@ -41,16 +41,6 @@ async def classify_url(request):
     return predict_image_from_bytes(bytes)
 
 def predict_image_from_bytes(bytes):
-    #load byte data into a stream
-    #img_file = io.BytesIO(bytes)
-    #encoding the image in base64 to serve in HTML
-    #img_pil = Image.open(img_file)
-    #img_pil.save("img.jpg", format="JPEG")
-    #img_uri = base64.b64encode(open("img.jpg", 'rb').read()).decode('utf-8')
-    
-    #make inference on image and return an HTML response
-    #img = open_image(img_file)
-    #pred_class, pred_idx, outputs = learner.predict(img)
 
     # ADD ******************
 
